@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 
 <head>
@@ -20,31 +21,44 @@
 <body class="locked">
 
   <!-- =========================
+       WEDDING MUSIC
+  ========================== -->
+
+  <audio id="weddingMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- =========================
        OPENING
   ========================== -->
 
   <div id="opening" class="opening">
 
-    <div class="envelope-wrap">
+```
+<div class="envelope-wrap">
 
-      <div class="envelope-photo"></div>
+  <div class="envelope-photo">
+    <img src="envelope-cover.png" alt="Ali & Yara">
+  </div>
 
-      <div class="open-copy">
-        <p>A WEDDING INVITATION</p>
+  <div class="open-copy">
 
-        <h1>
-          Ali <i>&amp;</i> Yara
-        </h1>
+    <p>A WEDDING INVITATION</p>
 
-        <button id="openBtn">
-          OPEN INVITATION
-        </button>
-      </div>
+    <h1>
+      Ali <i>&amp;</i> Yara
+    </h1>
 
-    </div>
+    <button id="openBtn">
+      OPEN INVITATION
+    </button>
 
   </div>
 
+</div>
+```
+
+  </div>
 
   <!-- =========================
        TOP BAR
@@ -52,16 +66,17 @@
 
   <header class="topbar">
 
-    <div class="monogram">
-      A<span>&amp;</span>Y
-    </div>
+```
+<div class="monogram">
+  A<span>&amp;</span>Y
+</div>
 
-    <button id="musicToggle" class="music-btn">
-      ♫
-    </button>
+<button id="musicToggle" class="music-btn" type="button">
+  ♫
+</button>
+```
 
   </header>
-
 
   <!-- =========================
        MAIN WEBSITE
@@ -69,250 +84,408 @@
 
   <main id="site" class="site">
 
+```
+<!-- =========================
+     01 — HERO
+========================== -->
 
-    <!-- =========================
-         01 — HERO
-    ========================== -->
+<section class="slide slide-hero">
 
-    <section class="slide slide-hero">
+  <div
+    class="art-full"
+    style="background-image:url('background.jpg');">
+  </div>
 
-      <div class="art-full"></div>
+  <div class="slide-content hero-content">
 
-      <div class="slide-content hero-content">
+    <p class="eyebrow">
+      YOU ARE INVITED TO
+    </p>
 
-        <p class="eyebrow">
-          YOU ARE INVITED TO
-        </p>
+    <h2>
+      Ali <i>&amp;</i> Yara
+    </h2>
 
-        <h2>
-          Ali <i>&amp;</i> Yara
-        </h2>
+    <div class="wedding-title">
+      WEDDING
+    </div>
 
-        <div class="wedding-title">
-          WEDDING
-        </div>
+    <p class="date">
+      06 NOVEMBER 2026
+    </p>
 
-        <p class="date">
-          06 NOVEMBER 2026
-        </p>
+    <p class="venue">
+      PYRAMIDS PALACE VENUE · 5:00 PM
+    </p>
 
-        <p class="venue">
-          PYRAMIDS PALACE VENUE · 5:00 PM
-        </p>
+  </div>
 
+  <div class="slide-number">
+    01
+  </div>
+
+</section>
+
+
+<!-- =========================
+     02 — DETAILS
+========================== -->
+
+<section class="slide slide-details">
+
+  <div
+    class="art-full"
+    style="background-image:url('couple.jpg');">
+  </div>
+
+  <div class="slide-content details-content">
+
+    <p class="eyebrow">
+      THE CELEBRATION
+    </p>
+
+    <h3>
+      Our special day
+    </h3>
+
+    <div class="glass-card">
+
+      <span>DATE</span>
+
+      <strong>
+        06 November 2026
+      </strong>
+
+      <span>TIME</span>
+
+      <strong>
+        Our Katb Ketab is at 5 PM sharp — be there on time, because this is a moment you won’t want to miss!!
+      </strong>
+
+      <span>VENUE</span>
+
+      <strong>
+        Pyramids Palace Venue
+      </strong>
+
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://maps.app.goo.gl/97XKmbRZ7vso3VtJ6?g_st=ic">
+        VIEW LOCATION
+      </a>
+
+    </div>
+
+  </div>
+
+  <div class="slide-number">
+    02
+  </div>
+
+</section>
+
+
+<!-- =========================
+     03 — COUNTDOWN
+========================== -->
+
+<section class="slide slide-countdown">
+
+  <div
+    class="art-full"
+    style="background-image:url('wedding-frame.png');">
+  </div>
+
+  <div class="slide-content countdown-content">
+
+    <p class="eyebrow">
+      SAVE THE DATE
+    </p>
+
+    <h3>
+      Until our forever begins
+    </h3>
+
+    <div class="big-count">
+
+      <div>
+        <b id="days2">00</b>
+        <small>DAYS</small>
       </div>
 
-      <div class="slide-number">
-        01
+      <div>
+        <b id="hours2">00</b>
+        <small>HOURS</small>
       </div>
 
-    </section>
-
-
-    <!-- =========================
-         02 — DETAILS
-    ========================== -->
-
-    <section class="slide slide-details">
-
-      <div class="art-full"></div>
-
-      <div class="slide-content details-content">
-
-        <p class="eyebrow">
-          THE CELEBRATION
-        </p>
-
-        <h3>
-          Our special day
-        </h3>
-
-        <div class="glass-card">
-
-          <span>DATE</span>
-          <strong>
-            06 November 2026
-          </strong>
-
-          <span>TIME</span>
-
-          <strong>
-            Our Katb Ketab is at 5 PM sharp — be there on time, because this is a moment you won’t want to miss!!
-          </strong>
-
-
-
-          <span>VENUE</span>
-          <strong>
-            Pyramids Palace Venue
-          </strong>
-
-          <a target="_blank" href="https://maps.app.goo.gl/97XKmbRZ7vso3VtJ6?g_st=ic">
-            VIEW LOCATION
-          </a>
-
-        </div>
-
+      <div>
+        <b id="minutes2">00</b>
+        <small>MINUTES</small>
       </div>
 
-      <div class="slide-number">
-        02
-      </div>
+    </div>
 
-    </section>
+    <p class="copy">
+      We can't wait to celebrate this beautiful beginning with you.
+    </p>
 
+  </div>
 
-    <!-- =========================
-         03 — COUNTDOWN
-    ========================== -->
+  <div class="slide-number">
+    03
+  </div>
 
-    <section class="slide slide-countdown">
-
-      <div class="art-full"></div>
-
-      <div class="slide-content countdown-content">
-
-        <p class="eyebrow">
-          SAVE THE DATE
-        </p>
-
-        <h3>
-          Until our forever begins
-        </h3>
-
-        <div class="big-count">
-
-          <div>
-            <b id="days2">00</b>
-            <small>DAYS</small>
-          </div>
-
-          <div>
-            <b id="hours2">00</b>
-            <small>HOURS</small>
-          </div>
-
-          <div>
-            <b id="minutes2">00</b>
-            <small>MINUTES</small>
-          </div>
-
-        </div>
-
-        <p class="copy">
-          We can't wait to celebrate this beautiful beginning with you.
-        </p>
-
-      </div>
-
-      <div class="slide-number">
-        03
-      </div>
-
-    </section>
+</section>
 
 
-    <!-- =========================
-         04 — RSVP
-    ========================== -->
+<!-- =========================
+     04 — RSVP
+========================== -->
 
-    <section class="slide slide-rsvp">
+<section class="slide slide-rsvp">
 
-      <div class="art-full"></div>
+  <div
+    class="art-full"
+    style="background-image:url('background.jpg');">
+  </div>
 
-      <div class="slide-content rsvp-content">
+  <div class="slide-content rsvp-content">
 
-        <p class="eyebrow">
-          RSVP
-        </p>
+    <p class="eyebrow">
+      RSVP
+    </p>
 
-        <h3>
-          We would love to have you here with us.
-        </h3>
+    <h3>
+      We would love to have you here with us.
+    </h3>
 
-        <form id="rsvpForm">
+    <form id="rsvpForm">
 
-          <input required name="name" placeholder="Your name">
+      <input
+        required
+        name="name"
+        placeholder="Your name">
 
-          <select required name="attendance">
+      <select
+        required
+        name="attendance">
 
-            <option value="">
-              Will you attend?
-            </option>
+        <option value="">
+          Will you attend?
+        </option>
 
-            <option>
-              Yes, with pleasure
-            </option>
+        <option>
+          Yes, with pleasure
+        </option>
 
-            <option>
-              Sorry, I can't make it
-            </option>
+        <option>
+          Sorry, I can't make it
+        </option>
 
-          </select>
+      </select>
 
+      <textarea
+        name="message"
+        placeholder="Message (optional)"></textarea>
 
+      <button type="submit">
+        SEND RSVP
+      </button>
 
-          <textarea name="message" placeholder="Message (optional)">
-          </textarea>
+    </form>
 
-          <button type="submit">
-            SEND RSVP
-          </button>
+    <p id="rsvpMsg"></p>
 
-        </form>
+  </div>
 
-        <p id="rsvpMsg"></p>
+  <div class="slide-number">
+    04
+  </div>
 
-      </div>
-
-      <div class="slide-number">
-        04
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         05 — FINAL
-    ========================== -->
-
-    <section class="slide slide-final">
-
-      <div class="art-full"></div>
-
-      <div class="slide-content final-content">
-
-        <p class="eyebrow">
-          UNTIL THEN
-        </p>
-
-        <h3>
-          We can't wait to celebrate with you.
-        </h3>
+</section>
 
 
+<!-- =========================
+     05 — FINAL
+========================== -->
 
-        <p class="date final-date">
-          06 · 11 · 2026
-        </p>
+<section class="slide slide-final">
 
-      </div>
+  <div
+    class="art-full"
+    style="background-image:url('couple.jpg');">
+  </div>
 
-      <div class="slide-number">
-        05
-      </div>
+  <div class="slide-content final-content">
 
-    </section>
+    <p class="eyebrow">
+      UNTIL THEN
+    </p>
 
+    <h3>
+      We can't wait to celebrate with you.
+    </h3>
+
+    <p class="date final-date">
+      06 · 11 · 2026
+    </p>
+
+  </div>
+
+  <div class="slide-number">
+    05
+  </div>
+
+</section>
+```
 
   </main>
-
 
   <!-- =========================
        JAVASCRIPT
   ========================== -->
 
-  <script src="script.js"></script>
+  <script>
+
+    const openBtn = document.getElementById("openBtn");
+    const music = document.getElementById("weddingMusic");
+    const musicToggle = document.getElementById("musicToggle");
+    const opening = document.getElementById("opening");
+
+    let musicPlaying = false;
+
+
+    /* =========================
+       OPEN INVITATION
+    ========================== */
+
+    openBtn.addEventListener("click", async () => {
+
+      document.body.classList.remove("locked");
+
+      opening.classList.add("opened");
+
+      try {
+        await music.play();
+        musicPlaying = true;
+        musicToggle.classList.add("playing");
+      } catch (error) {
+        console.log("Music could not start:", error);
+      }
+
+    });
+
+
+    /* =========================
+       MUSIC BUTTON
+    ========================== */
+
+    musicToggle.addEventListener("click", async () => {
+
+      if (music.paused) {
+
+        try {
+          await music.play();
+          musicPlaying = true;
+          musicToggle.classList.add("playing");
+        } catch (error) {
+          console.log(error);
+        }
+
+      } else {
+
+        music.pause();
+        musicPlaying = false;
+        musicToggle.classList.remove("playing");
+
+      }
+
+    });
+
+
+    /* =========================
+       COUNTDOWN
+    ========================== */
+
+    const weddingDate = new Date("November 6, 2026 17:00:00").getTime();
+
+    function updateCountdown() {
+
+      const now = new Date().getTime();
+
+      const distance = weddingDate - now;
+
+      if (distance <= 0) {
+
+        document.getElementById("days2").textContent = "00";
+        document.getElementById("hours2").textContent = "00";
+        document.getElementById("minutes2").textContent = "00";
+
+        return;
+      }
+
+      const days = Math.floor(
+        distance / (1000 * 60 * 60 * 24)
+      );
+
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60)
+      );
+
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) /
+        (1000 * 60)
+      );
+
+      document.getElementById("days2").textContent =
+        String(days).padStart(2, "0");
+
+      document.getElementById("hours2").textContent =
+        String(hours).padStart(2, "0");
+
+      document.getElementById("minutes2").textContent =
+        String(minutes).padStart(2, "0");
+
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+
+    /* =========================
+       RSVP
+    ========================== */
+
+    const rsvpForm = document.getElementById("rsvpForm");
+    const rsvpMsg = document.getElementById("rsvpMsg");
+
+    rsvpForm.addEventListener("submit", function (event) {
+
+      event.preventDefault();
+
+      const formData = new FormData(rsvpForm);
+
+      const name = formData.get("name");
+      const attendance = formData.get("attendance");
+      const message = formData.get("message");
+
+      console.log({
+        name,
+        attendance,
+        message
+      });
+
+      rsvpMsg.textContent =
+        "Thank you, " + name + " ❤️";
+
+      rsvpForm.reset();
+
+    });
+
+  </script>
 
 </body>
 
